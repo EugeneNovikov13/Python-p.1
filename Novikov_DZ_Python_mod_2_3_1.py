@@ -188,40 +188,40 @@
 # считаем верные и неверные ответы по пятибалльный шкале, исходя из процентного соотношения верных и неверных ответов.
 # Пользователь должен иметь возможность прекратить игру в любой момент и сразу получить оценку
 
-import random
-
-level = int(input('Choose level [1-3]: '))
-
-num1 = num2 = 1
-ans = 0
-ans_quan = 0
-right_ans = 0
-finish = ''
-
-while finish != 'yes':
-    if level == 1:
-        num1 = random.randint(1, 10)
-        num2 = random.randint(1, 10)
-    elif level == 2:
-        num1 = random.randint(1, 10)
-        num2 = random.randint(11, 30)
-    elif level == 3:
-        num1 = random.randint(11, 30)
-        num2 = random.randint(11, 33)
-
-    ans = float(input(f'{num1} * {num2} = '))
-    right_ans += 1 if ans == num1 * num2 else 0
-    ans_quan += 1
-    finish = input('Enter "f" for finish. Push ENTER for continue.')
-
-if 1 >= right_ans / ans_quan >= 0.8:
-    res = '5'
-elif 0.8 > right_ans / ans_quan >= 0.6:
-    res = '4'
-elif 0.6 > right_ans / ans_quan >= 0.4:
-    res = '3'
-else:
-    res = '2'
-
-print(f'Your mark: {res}')
+# import random
+#
+# level = int(input('Choose level [1-3]: '))
+#
+# num1 = num2 = 1
+# ans = 0
+# ans_quan = 0
+# right_ans = 0
+# finish = ''
+#
+# while finish != 'f':
+#     if level == 1:
+#         num1 = random.randint(1, 10)
+#         num2 = random.randint(1, 10)
+#     elif level == 2:
+#         num1 = random.randint(1, 10)
+#         num2 = random.randint(11, 30)
+#     elif level == 3:
+#         num1 = random.randint(11, 30)
+#         num2 = random.randint(11, 33)
+#
+#     ans = float(input(f'{num1} * {num2} = '))
+#     right_ans += 1 if ans == num1 * num2 else 0
+#     ans_quan += 1
+#     finish = input('Enter "f" for finish. Push ENTER for continue.')
+#
+# if 1 >= right_ans / ans_quan >= 0.8:
+#     res = '5'
+# elif 0.8 > right_ans / ans_quan >= 0.6:
+#     res = '4'
+# elif 0.6 > right_ans / ans_quan >= 0.4:
+#     res = '3'
+# else:
+#     res = '2'
+#
+# print(f'Your mark: {res}')
 
