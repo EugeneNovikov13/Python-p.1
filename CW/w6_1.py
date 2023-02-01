@@ -69,13 +69,5 @@
 # else:
 #     print('Number is simple')
 
-num_x = int(input('Enter number: '))
 
-res = 0
-
-for i in range(3, num_x):
-    if i % 3 == 0 or i % 5 == 0:
-        res += i
-
-print(res)
 
