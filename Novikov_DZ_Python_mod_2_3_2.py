@@ -39,7 +39,7 @@ if red_car > white_car:
             white_car -= 1
         res += 'R'
 elif white_car > red_car:
-    if white_car - red_car > 2:
+    if white_car / red_car > 2:
         res = 'Mission impossible!'
     elif white_car - red_car == 2:
         while red_car != 0:
