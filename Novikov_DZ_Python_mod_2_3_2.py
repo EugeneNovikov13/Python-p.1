@@ -22,40 +22,34 @@
 # удовлетворяющую условию задачи. Пробелы между символами выводить не нужно.
 # Если расставить машины согласно условию задачи невозможно, выведите строку “Нет решения”.
 
-red_car = int(input('Enter number of red car: '))
-white_car = int(input('Enter number of white car: '))
-
-res = ''
-if red_car > white_car:
-    if red_car / white_car > 2:
-        res = 'Mission impossible!'
-    elif red_car - white_car == 2:
-        while white_car != 0:
-            res += 'RWR'
-            white_car -= 1
-    elif red_car - white_car == 1:
-        while white_car != 0:
-            res += 'RW'
-            white_car -= 1
-        res += 'R'
-elif white_car > red_car:
-    if white_car - red_car > 2:
-        res = 'Mission impossible!'
-    elif white_car - red_car == 2:
-        while red_car != 0:
-            res += 'WRW'
-            red_car -= 1
-    elif white_car - red_car == 1:
-        while red_car != 0:
-            res += 'WR'
-            red_car -= 1
-        res += 'W'
-else:
-    while white_car != 0:
-        res += 'RW'
-        white_car -= 1
-
-print(res)
+# red_car = int(input('Enter number of red car: '))
+# white_car = int(input('Enter number of white car: '))
+#
+# if red_car / white_car > 2 or red_car / white_car < 0.5:
+#     res = 'Mission impossible!'
+# else:
+#     if red_car > white_car:
+#         color_more = 'R'
+#         color_less = 'W'
+#     else:
+#         color_more = 'W'
+#         color_less = 'R'
+#         red_car, white_car = white_car, red_car
+#
+#     res = ''
+#
+#     while red_car - white_car > 1:
+#         res += color_more + color_less + color_more
+#         red_car -= 2
+#         white_car -= 1
+#     while white_car != 0:
+#         res += color_more + color_less
+#         red_car -= 1
+#         white_car -= 1
+#     if red_car == 1:
+#         res += color_more
+#
+# print(res)
 
 
 
