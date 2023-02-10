@@ -28,17 +28,17 @@
 # lst = [int(i) for i in input('Enter numbers: ').split()]
 # print(max(lst), min(lst), sum(lst))
 # ///////////////////////
-x, *y, z = 'I want in IT!'
-print(y)
+# x, *y, z = 'I want in IT!'
+# print(y)
 
 # a = [1, 2]
 # print(*a)
 
-a = [1, 8]
+# a = [1, 8]
 # range(*a)
 # print(list(range(*a)))
 # print([*range(*a)])
-
+#
 # d = [10, 20]
 # print([*range(*a), *['I am cool'], *d])
 # ///////////////////////
@@ -50,5 +50,10 @@ a = [1, 8]
 #
 # print(input().replace('+7', '8').replace('-', ''))
 # ///////////////////////
-
+lst = [*input('Введите номер телефона: ')]
+print(lst)
+print(*lst)
+del lst[0]
+lst[0] = '8'
+print(''.join(lst).replace('-', ''))
 
