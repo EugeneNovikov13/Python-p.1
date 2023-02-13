@@ -37,22 +37,22 @@
 # Кол-во цифр 3 при втором объединении: 4
 # Итоговый список: [1, 3, 1, 1, 1, 3, 1, 5, 3, 3]
 
-list_main = [1, 5, 3]
-list1 = [1, 5, 1, 5]
-list2 = [1, 3, 1, 5, 3, 3]
-
-list_main.extend(list1)
-
-count = list_main.count(5)
-print(f'5 after first addition: {count}')
-
-list_main = [i for i in list_main if i != 5]
-
-list_main.extend(list2)
-
-count = list_main.count(3)
-print(f'3 after second addition: {count}')
-print(list_main)
+# list_main = [1, 5, 3]
+# list1 = [1, 5, 1, 5]
+# list2 = [1, 3, 1, 5, 3, 3]
+#
+# list_main.extend(list1)
+#
+# count = list_main.count(5)
+# print(f'5 after first addition: {count}')
+#
+# list_main = [i for i in list_main if i != 5]
+#
+# list_main.extend(list2)
+#
+# count = list_main.count(3)
+# print(f'3 after second addition: {count}')
+# print(list_main)
 
 # Задача 2. Шеренга
 # Два класса стоят в две отдельные шеренги. В каждом классе ученики выстроены по росту (по возрастанию):
