@@ -59,14 +59,14 @@
 #
 # say_hello('hello')
 # ////////////////////////
-# def per_and_sq(w, h):
-#     return 2 * (w + h), w * h
-#
-#
-# r = per_and_sq(3, 5)
-# per, sq = per_and_sq(4, 6)
-# print(r)
-# print(per, sq)
+def per_and_sq(w, h):
+    return 2 * (w + h), w * h
+
+
+r = per_and_sq(3, 5)
+per, sq = per_and_sq(4, 6)
+print(r)
+print(per, sq)
 # ////////////////////////
 # def pr_hello():
 #     print('hello')

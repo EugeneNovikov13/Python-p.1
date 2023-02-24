@@ -46,23 +46,23 @@
 # say_bye()
 # print(name)
 # ///////////////////////
-# x = 0
-#
-#
-# def outer():
-#     x = 1
-#     def inner():
-#         # nonlocal x
-#         # global x
-#         x = 2
-#         print('inner', x)
-#     inner()
-#     print('outer', x)
-#
-#
-# outer()
-#
-# print('global', x)
+x = 0
+
+
+def outer():
+    x = 1
+    def inner():
+        nonlocal x
+        # global x
+        x = 2
+        print('inner', x)
+    inner()
+    print('outer', x)
+
+
+outer()
+
+print('global', x)
 # ///////////////////////
 # //РЕКУРСИЯ//
 # def func_rec(x, n):
