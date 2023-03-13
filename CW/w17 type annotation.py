@@ -117,35 +117,42 @@ from typing import Optional, Any, Union, List, Callable
 # print(search_nearest([1, 3, 2, 9, -5, 4, 0], -3))
 # ////////////////////////////////////////////////////////
 # Бинарный поиск
-def binary_search(lst: List[int], val: int) -> int:
-    first: int = 0
-    last: int = len(lst) - 1
-    index: int = -1
-    while first <= last and index == -1:
-        mid = (first + last) // 2
-        if lst[mid] == val:
-            index = mid
-        else:
-            if val < lst[mid]:
-                last = mid - 1
-            else:
-                first = mid + 1
-    return index
+# def binary_search(lst: List[int], val: int) -> int:
+#     first: int = 0
+#     last: int = len(lst) - 1
+#     index: int = -1
+#     while first <= last and index == -1:
+#         mid = (first + last) // 2
+#         if lst[mid] == val:
+#             index = mid
+#         else:
+#             if val < lst[mid]:
+#                 last = mid - 1
+#             else:
+#                 first = mid + 1
+#     return index
 # ////////////////////////////////////////////////////////
 
 
 def binary_search_rec(lst: List[int], val: int) -> int:
-    first = 0
-    last = len(lst)-1
-    if (first + last) // 2 == val:
-        return lst.index(val)
+    first: int = 0
+    last: int = len(lst)
+    mid: int = (first + last) // 2
+    if last == 1 and lst[mid] != val:
+        ind = -1
+        return ind
+    elif lst[mid] == val:
+        return mid
     else:
-        if val < (first + last) // 2:
-            last = lst.index(val) - 1
+        if val < lst[mid]:
+            ind = binary_search_rec(lst[first:mid], val)
+            return ind
         else:
-            first = lst.index(val) + 1
-        binary_search_rec(lst[first:last], val)
+            ind = binary_search_rec(lst[mid + 1:last], val)
+            if ind == -1:
+                return ind
+            else:
+                return ind + mid + 1
 
 
-print(binary_search_rec([10,20,30,40,50], 20))
-
+print(binary_search_rec([10, 20, 30, 40, 50, 60, 70, 80, 90], 70))

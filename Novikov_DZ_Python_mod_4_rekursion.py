@@ -43,28 +43,28 @@
 
 # Для упрощения проверки изменил длину списка на 20, а последовательности на 3. Числа от 0 до 10.
 
-# import random
-#
-#
-# def func_rec(lst, start_pos=0):
-#     if len(lst) == 3:
-#         min_pos = 17
-#         return min_pos, sum(lst)
-#
-#     sum1 = sum(lst[start_pos:3])
-#     min_pos, sum2 = func_rec(lst[start_pos + 1:])
-#
-#     if sum1 <= sum2:
-#         min_pos = 20 - len(lst[start_pos:])
-#         return min_pos, sum1
-#     else:
-#         return min_pos, sum2
-#
-#
-# lst1 = [random.randint(0, 10) for x in range(20)]
-# print(f'Список случайных чисел: {lst1}',
-#       f'Наименьшая сумма 3 чисел подряд: {func_rec(lst1)[1]}',
-#       f'Индекс начала последовательности: {func_rec(lst1)[0]}', sep='\n')
+import random
+
+
+def func_rec(lst, start_pos=0):
+    if len(lst) == 3:
+        min_pos = 17
+        return min_pos, sum(lst)
+
+    sum1 = sum(lst[start_pos:3])
+    min_pos, sum2 = func_rec(lst[start_pos + 1:])
+
+    if sum1 <= sum2:
+        min_pos = 20 - len(lst[start_pos:])
+        return min_pos, sum1
+    else:
+        return min_pos, sum2
+
+
+lst1 = [random.randint(0, 10) for x in range(20)]
+print(f'Список случайных чисел: {lst1}',
+      f'Наименьшая сумма 3 чисел подряд: {func_rec(lst1)[1]}',
+      f'Индекс начала последовательности: {func_rec(lst1)[0]}', sep='\n')
 
 # Задание 5**
 # Написать функцию, которая принимает две даты (т.е. функция принимает шесть параметров) и вычисляет разность
